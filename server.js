@@ -16,15 +16,19 @@ serveFiles("public");
 
 route('/', showIndex);
 
-route('/lottery', function(){
-	request.serveFile('lottery.xml');
-});
-
 //this route captures the user-input
 route('/userInput', getUserData);
 
 //this route makes the call to the user's date
 route('/callDate', dial);
+
+route('/usps', function(){
+	request.serveFile('usps.xml');
+});
+
+function showIndex(){
+	request.serveFile('index.html');
+};
 
 //collect all the input data from the user, sent from the client-side js
 function getUserData(request){
@@ -36,27 +40,22 @@ function getUserData(request){
     safeWord = details[2];
     strategy = details[3];
     
-    console.log(name);
-    console.log(number);
-    console.log(safeWord);
-    console.log(strategy);
+    console.log("Date's Name: " + name);
+    console.log("Date's number: " + number);
+    console.log("Your safe word: " + safeWord);
+    console.log("Your strategy: " + strategy);
 }
-
-//this function shows the homepage
-function showIndex(){
-	request.serveFile('index.html');
-};
-
-start();
 
 
 function dial(){
 //Place a phone call, and respond with TwiML instructions from the given URL
 	client.makeCall({
 
-	to: '+1' + number, // Any number Twilio can call
+	//to: '+1' + number, // Any number Twilio can call
+	//to: '+19292404478', //me
+	to: '+18605733345', //seth
 	from: '+12012126779', // A number you bought from Twilio and can use for outbound communication
-	url: 'http://104.131.167.46:3001/lottery.xml' // A URL that produces an XML document (TwiML) which contains instructions for the call
+	url: 'http://104.131.167.46:3001/usps.xml' // A URL that produces an XML document (TwiML) which contains instructions for the call
 
 	}, function(err, responseData) {
 
@@ -65,3 +64,5 @@ function dial(){
 	  console.log(responseData.from);
 	});
 };
+
+start();

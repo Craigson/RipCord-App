@@ -2,6 +2,8 @@
 // http://shapeshed.com/html5-speech-recognition-api/
 $(document).ready(function(){
 
+$('listening').hide();
+
   var dateName;
   var dateNo;
   var safeWord;
@@ -25,6 +27,7 @@ $(document).ready(function(){
     i++;
   };
 
+
 $('#begin').click(function(){
   console.log("recording...");
 
@@ -47,7 +50,10 @@ $('#begin').click(function(){
   thisInfo += ',';
   thisInfo += exitStrat;
 
-  console.log(thisInfo);
+  //console.log(thisInfo);
+
+  $('#wrapper').hide(10);
+  $('#listening').css({'display':'block'});
 
 //send the data to the server by calling the /userInput route
   $.post('/userInput', {userData: thisInfo}, function(){

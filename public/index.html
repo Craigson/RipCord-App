@@ -1,48 +1,63 @@
 <!doctype html>
 <head>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
- <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+<div id ="wrapper">
 <h1 id = "title">RipCord</h>
-<h2>Eject yourself from an unpleasant date </h2>
+<h2> "Work your safe-word into the conversation if you feel the need to bail out of an awkward encounter!"</h2>
 <form>
-	Your Date's Name: 
+	<div class="section">
+	Your Date's Name 
 	<br>
-		<input type="text" id="name">
+		<input type="text" id="name" placeholder="eg. John Smith">
 	<br>
+	</div>
+
+	<div class="section">
+	Your Date's number
+	<br>
+		+1<input type="text" id = "telNo" placeholder="5556667777">
+	<br>
+	</div>
 	
-	Your Date's number:
-	<br>
-		+1<input type="text" id = "telNo">
-	<br>
-	
-	
-	Pick a safe-word:
+	<div class="section">
+	Pick a safe-word
 	<br>
 	<select id="word">
-		<option>catfish</option>
 		<option>elephant</option>
+		<option>catfish</option>
 		<option>crocodile</option>
 	</select>
 	<br>
+	</div>
 
-	
-	Pick an exit strategy:
+	<div class="section">
+	Pick an exit strategy
 	<br>
 	<select id="strategy">
-		<option>Lottery Win</option>
 		<option>Recruited by the CIA</option>
-		<option>Jupiter is the worst planet</option>
+		<option>USPS urgent delivery</option>
+		<option>IRS refund</option>
 	</select>
 	<br>
+	</div>
 
-	<input type="button" id="begin" value="Begin">
+	<input type="button" class="btn" id="begin" value="start">
 
 </form>
+</div>
+
+<div id = "listening">
+<img src="ear.png">
+<br>
+<p>"Keep RipCord open and your phone within earshot. Feeling uncomfortable? Just say your safe-word and let RipCord take care of the rest."</div>
+</div>
 
 </body>
 </html>
