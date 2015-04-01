@@ -38,6 +38,17 @@ select {
 	font-size: 1.2em;
 }
 
+#welcome {
+	display: inline-block;
+	color: white;
+position: absolute;
+left: 20%;
+top: 20%;
+height: 60%;
+width: 60%;
+
+}
+
 #wrapper {
 	display: inline-block;
 	width:70%;

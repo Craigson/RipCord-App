@@ -1,8 +1,8 @@
 // Using chrome speech API
 // http://shapeshed.com/html5-speech-recognition-api/
 $(document).ready(function(){
-
-$('listening').hide();
+$('#wrapper').hide();
+$('#listening').hide();
 
   var dateName;
   var dateNo;
@@ -27,9 +27,15 @@ $('listening').hide();
     i++;
   };
 
+$('html').click(function(){
+  $('#welcome').hide(10);
+  $('#wrapper').css({'display':'inline-block'});
+
+});
+
 
 $('#begin').click(function(){
-  console.log("recording...");
+  console.log("listening...");
 
   var thisInfo = ''; //create an empty string that user input can be added to
   var userData; //variable for storing the user's data for the httpPost
