@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-<Say>This is an automated message intended for Seth Kranzlerfrom the United States Postal Service.  If you are not Seth Kranzler, please press one or hang up now.  There is a delivery marked high value waiting for you at your address. The USPS agent has been instructed to wait for approximately forty-five minutes.  If you are not there to receive the package in person, USPS cannot guarantee the safety of your package. Good bye. </Say>
+<Say>This is an automated message intended for Seth Kranzler, from the United States Postal Service.  If you are not Seth Kranzler, please press one or hang up now.  There is a delivery marked "valuable and fragile" waiting for you at your residential address. You are receiving this message as there is currently nobody at the specified delivery address. The USPS agent has been instructed to wait for approximately forty-five minutes.  If you are not there to receive the package in person, USPS cannot guarantee the safe delivery of your package. Good bye. </Say>
 </Response>
